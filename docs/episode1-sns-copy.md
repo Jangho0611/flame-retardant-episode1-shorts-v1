@@ -20,7 +20,7 @@
 
 대산에서 쉽고 빠르게 확인해 보세요.
 
-🌐 [https://daesan.ai](https://daesan.ai)
+🌐 daesan.ai
 
 전국 납품 및 대량 구매 상담 가능합니다.
 
@@ -59,7 +59,7 @@
 
 대산에서 쉽고 빠르게 확인해 보세요.
 
-🌐 [https://daesan.ai](https://daesan.ai)
+🌐 daesan.ai
 
 전국 납품 및 대량 구매 상담 가능합니다.
 
@@ -91,7 +91,7 @@
 
 대산에서 쉽고 빠르게 확인해 보세요.
 
-🌐 [https://daesan.ai](https://daesan.ai)
+🌐 daesan.ai
 
 전국 납품 및 대량 구매 상담 가능합니다.
 
