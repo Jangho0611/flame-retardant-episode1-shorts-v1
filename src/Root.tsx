@@ -8,9 +8,14 @@ import {Scene05, SCENE05_DURATION} from './components/Scene05';
 import {Scene06, SCENE06_DURATION} from './components/Scene06';
 import {Scene07, SCENE07_DURATION} from './components/Scene07';
 import {Episode1Full, EPISODE1_FULL_DURATION} from './Episode1Full';
+import {Flame1SquareSafeCover, UV1SquareSafeCover, UV2SquareSafeCover, UV3SquareSafeCover} from './SquareSafeCovers';
 
 export const RemotionRoot: React.FC = () => (
   <>
+    <Composition id="UV1SquareSafeCover" component={UV1SquareSafeCover} durationInFrames={1} fps={30} width={1080} height={1920} />
+    <Composition id="UV2SquareSafeCover" component={UV2SquareSafeCover} durationInFrames={1} fps={30} width={1080} height={1920} />
+    <Composition id="UV3SquareSafeCover" component={UV3SquareSafeCover} durationInFrames={1} fps={30} width={1080} height={1920} />
+    <Composition id="Flame1SquareSafeCover" component={Flame1SquareSafeCover} durationInFrames={1} fps={30} width={1080} height={1920} />
     <Composition
       id="EnvironmentCheck"
       component={EnvironmentCheck}
