@@ -17,13 +17,14 @@ const Brand: React.FC<{light?: boolean; left?: number}> = ({light = false, left 
 };
 
 const Category: React.FC<{light?: boolean; flame?: boolean}> = ({light = false, flame = false}) => (
-  <div style={{position: 'absolute', left: 88, top: 168, padding: '12px 22px', borderRadius: 999, fontSize: 28, fontWeight: 700, color: light ? '#FFFFFF' : green, background: light ? 'rgba(19,47,65,.72)' : 'rgba(218,237,225,.94)', border: `1px solid ${light ? 'rgba(255,255,255,.30)' : 'rgba(20,99,53,.18)'}`, backdropFilter: 'blur(8px)'}}>
-    건축자재 상식 · {flame ? '방염판' : 'UV코팅판'}
+  <div style={{position: 'absolute', left: 88, top: 286, display: 'flex', alignItems: 'center', gap: 14, fontSize: 28, fontWeight: 700, color: light ? '#FFFFFF' : green, letterSpacing: '-0.035em'}}>
+    <span style={{display: 'block', width: 6, height: 34, borderRadius: 2, background: flame ? '#EB674E' : green}} />
+    <span>건축자재 상식 · {flame ? '방염판' : 'UV코팅판'}</span>
   </div>
 );
 
 const Headline: React.FC<{lines: string[]; light?: boolean; accent?: string}> = ({lines, light = false, accent = green}) => (
-  <div style={{position: 'absolute', left: 52, top: 410, width: 720, height: 356, boxSizing: 'border-box', padding: '34px 36px', borderRadius: 32, background: light ? 'linear-gradient(135deg,rgba(29,55,73,.92),rgba(48,77,96,.78))' : 'linear-gradient(135deg,rgba(237,247,241,.96),rgba(248,245,235,.88))', border: `1px solid ${light ? 'rgba(255,255,255,.22)' : 'rgba(20,99,53,.15)'}`, boxShadow: light ? '0 18px 50px rgba(14,32,45,.22)' : '0 18px 50px rgba(71,60,38,.10)', backdropFilter: 'blur(10px)'}}>
+  <div style={{position: 'absolute', left: 52, top: 340, width: 720, height: 356, boxSizing: 'border-box', padding: '34px 36px', borderRadius: 32, background: light ? 'linear-gradient(135deg,rgba(29,55,73,.92),rgba(48,77,96,.78))' : 'linear-gradient(135deg,rgba(237,247,241,.96),rgba(248,245,235,.88))', border: `1px solid ${light ? 'rgba(255,255,255,.22)' : 'rgba(20,99,53,.15)'}`, boxShadow: light ? '0 18px 50px rgba(14,32,45,.22)' : '0 18px 50px rgba(71,60,38,.10)', backdropFilter: 'blur(10px)'}}>
     <div style={{position: 'absolute', right: 28, top: 25, display: 'flex', gap: 10}}><span style={{width: 12, height: 12, borderRadius: 99, background: accent}} /><span style={{width: 12, height: 12, borderRadius: 99, background: light ? 'rgba(255,255,255,.55)' : 'rgba(32,35,33,.22)'}} /></div>
     <div style={{fontSize: 76, lineHeight: 1.08, fontWeight: 800, letterSpacing: '-0.055em', color: light ? '#FFFFFF' : '#202321'}}>
       {lines.map((line, index) => <div key={line} style={{color: index === lines.length - 1 ? accent : undefined}}>{line}</div>)}
@@ -32,18 +33,13 @@ const Headline: React.FC<{lines: string[]; light?: boolean; accent?: string}> = 
 );
 
 export const UV1SquareSafeCover: React.FC = () => (
-  <AbsoluteFill style={{fontFamily: FONT, overflow: 'hidden', background: 'linear-gradient(180deg,#FBF8F1 0%,#F4EBDD 100%)'}}>
-    <div style={{position: 'absolute', inset: 0, background: 'radial-gradient(circle at 84% 22%,rgba(197,224,207,.42),transparent 28%),radial-gradient(circle at 12% 72%,rgba(226,190,128,.16),transparent 34%)'}} />
-    <div style={{position: 'absolute', left: 300, top: 748, width: 590, height: 900, transform: 'rotate(-3deg)', filter: 'drop-shadow(0 20px 24px rgba(91,65,31,.15))'}}>
-      <Img src={staticFile('covers/square-safe/sources/uv1-raw.png')} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
-    </div>
-    <div style={{position: 'absolute', left: 500, top: 720, width: 600, height: 920, transform: 'rotate(3deg)', filter: 'drop-shadow(0 20px 26px rgba(91,65,31,.19))'}}>
-      <Img src={staticFile('covers/square-safe/sources/uv1-coated.png')} style={{width: '100%', height: '100%', objectFit: 'contain'}} />
-    </div>
-    <Img src={staticFile('covers/square-safe/sources/uv1-daesan.png')} style={{position: 'absolute', left: 8, top: 1090, width: 300, height: 498, objectFit: 'contain'}} />
+  <AbsoluteFill style={{fontFamily: FONT, overflow: 'hidden', background: '#F8F4EA'}}>
+    <Img src={staticFile('covers/square-safe/sources/uv1-original-cover-clean.png')} style={{position: 'absolute', inset: 0, width: 1080, height: 1920, objectFit: 'cover'}} />
     <Category />
-    <Headline lines={['왜 더 비싼', 'UV코팅판을', '쓸까요?']} />
-    <Brand left={748} />
+    <div style={{position: 'absolute', left: 88, top: 370, fontSize: 72, lineHeight: 1.08, fontWeight: 800, letterSpacing: '-0.055em', color: '#202321'}}>
+      <div>왜 더 비싼</div><div>UV코팅판을</div><div style={{color: green}}>쓸까요?</div>
+    </div>
+    <Brand left={88} />
   </AbsoluteFill>
 );
 
